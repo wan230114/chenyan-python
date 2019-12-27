@@ -94,8 +94,8 @@ for i_m, LL in enumerate(L_result[::-1]):
             # print(GZ_name_last, '--->', GZ_name_now2, shengyu[-1])
             gz.node(GZ_name_now, str(shadui), d_gz_node)
             gz.node(GZ_name_now2, str(shengyu[-1]))
-            gz.edge(GZ_name_last, GZ_name_now, str((s1, s2)))
-            gz.edge(GZ_name_last, GZ_name_now2, str((s3, s4)))
+            gz.edge(GZ_name_last, GZ_name_now, '(%+3d,%+3d)' % (s1, s2))
+            gz.edge(GZ_name_last, GZ_name_now2, '(%+3d,%+3d)' % (s3, s4))
             GZ_name_last = GZ_name_now
 # print(gz.source)
 gz.view()
