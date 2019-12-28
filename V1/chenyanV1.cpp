@@ -5,23 +5,23 @@
 using namespace std;
 
 class chenyan{
-private:
-	//变量定义
-	float start = 0, a1 = 0, a2 = 0, b1 = 0, b2 = 0, c1 = 0, c2 = 0;
-	float aa2 = 0, bb2 = 0, cc2 = 0;//分量暂存器
-	int n;   //记录第几步
-	int i, j, k; //记录应该使用的方法
-	int shu = 0;//记录可行的方法第几种
-	float A1[10]; //用三个数组储存3步结果
-	float A2[10];
-	float A3[10];
-public:
-	//函数声明
-	chenyan(float xx){ start = xx; };	//构造对象
-	void func();        //功能实现
-	float f(float x, int xx);	//具体方法实现
-	void data(float x, float y, float y2, float nn, float eha2, float ehb2, float f, float  _f, float _a2, float _b2);
-	void show(float x, float y, float y2, float nn, float eha2, float ehb2, float f, float  _f, float _a2, float _b2);
+	private:
+		//变量定义
+		float start = 0, a1 = 0, a2 = 0, b1 = 0, b2 = 0, c1 = 0, c2 = 0;
+		float aa2 = 0, bb2 = 0, cc2 = 0;//分量暂存器
+		int n;   //记录第几步
+		int i, j, k; //记录应该使用的方法
+		int shu = 0;//记录可行的方法第几种
+		float A1[10]; //用三个数组储存3步结果
+		float A2[10];
+		float A3[10];
+	public:
+		//函数声明
+		chenyan(float xx){ start = xx; };	//构造对象
+		void func();        //功能实现
+		float f(float x, int xx);	//具体方法实现
+		void data(float x, float y, float y2, float nn, float eha2, float ehb2, float f, float  _f, float _a2, float _b2);
+		void show(float x, float y, float y2, float nn, float eha2, float ehb2, float f, float  _f, float _a2, float _b2);
 };
 
 void chenyan::func(){
@@ -105,87 +105,87 @@ float chenyan::f(float x, int fn){
 	//jj = "【x平分为2份】"; jj = "【x加上砝码2g，平分为2份，取无砝码那份】";jj = "【x加上砝码2g，平分为2份，取有砝码那份】"; 
 	float y, y2;//返回的结果
 	switch (fn) {
-	case 0:		y = x - 2; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 0, 2, 0, 0);		 break;
-	case 1:		y = x - 5; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 2, 7, 0, 0);		 break;
-	case 2:		y = x - 7; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 0, 7, 0, 0);		 break;
-	case 3:		y = x - 9; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 0, 9, 0, 0);		 break;
-	case 4:		y = (x + 0) / 2; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 2, 0, 0, 0, 0, 0, 0);		 break;
-	case 5:		y = (x + 2) / 2; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 2, 0, 0, 0, 2, 0, 0);		 break;
-	case 6:		y = (x + 2) / 2 - 2; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 2, 0, 0, 2, 0, 0, 0);		 break;
-	case 7:		y = (x + 7) / 2; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 2, 0, 0, 0, 7, 0, 0);		 break;
-	case 8:		y = (x + 7) / 2 - 7; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 2, 0, 0, 7, 0, 0, 0);		 break;
-	case 9:		y = (x + 9) / 2; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 2, 0, 0, 0, 9, 0, 0);		 break;
-	case 10:	y = (x + 9) / 2 - 2; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 2, 0, 0, 2, 7, 0, 0);		 break;
-	case 11:	y = (x + 9) / 2 - 7; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 2, 0, 0, 7, 2, 0, 0);		 break;
-	case 12:	y = (x + 9) / 2 - 9; 	if (n == 1){ a2 = start - y; y2 = a2; };	if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 2, 0, 0, 9, 0, 0, 0);		 break;
-	case 13:	y = x - 2 - aa2; 		if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 0, 2, aa2, 0);		 break;
-	case 14:	y = x - 5 - aa2; 		if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 2, 7, aa2, 0);		 break;
-	case 15:	y = x - 7 - aa2; 		if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 0, 7, aa2, 0);		 break;
-	case 16:	y = x - 9 - aa2; 		if (n == 2){ b2 = a1 - y;	y2 = b2; };	if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 0, 9, aa2, 0);		 break;
-	case 17:	y = x - 2 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 1, aa2, 0, 0, 2, 0, 0);		 break;
-	case 18:	y = x - 5 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 1, aa2, 0, 2, 7, 0, 0);		 break;
-	case 19:	y = x - 7 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 1, aa2, 0, 0, 7, 0, 0);		 break;
-	case 20:	y = x - 9 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 1, aa2, 0, 0, 9, 0, 0);		 break;
-	case 21:	y = (x + 0) / 2 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 2, aa2, 0, 0, 0, 0, 0);		 break;
-	case 22:	y = (x + 2) / 2 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 2, aa2, 0, 0, 2, 0, 0);		 break;
-	case 23:	y = (x + 2) / 2 - 2 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 2, aa2, 0, 2, 0, 0, 0);		 break;
-	case 24:	y = (x + 7) / 2 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 2, aa2, 0, 0, 7, 0, 0);		 break;
-	case 25:	y = (x + 7) / 2 - 7 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 2, aa2, 0, 7, 0, 0, 0);		 break;
-	case 26:	y = (x + 9) / 2 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 2, aa2, 0, 0, 9, 0, 0);		 break;
-	case 27:	y = (x + 9) / 2 - 2 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 2, aa2, 0, 2, 7, 0, 0);		 break;
-	case 28:	y = (x + 9) / 2 - 7 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 2, aa2, 0, 7, 2, 0, 0);		 break;
-	case 29:	y = (x + 9) / 2 - 9 + aa2; 		if (n == 2){ b2 = a1 - (y - a2);	y2 = b2; };	if (n == 3){ c2 = b1 - (y - a2);	y2 = c2; };	a2 = 0;	data(x, y, y2, 2, aa2, 0, 9, 0, 0, 0);		 break;
-	case 30:	y = x - 2 - bb2; 					if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 0, 2, 0, bb2);		 break;
-	case 31:	y = x - 5 - bb2; 					if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 2, 7, 0, bb2);		 break;
-	case 32:	y = x - 7 - bb2; 					if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 0, 7, 0, bb2);		 break;
-	case 33:	y = x - 9 - bb2; 					if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 0, 9, 0, bb2);		 break;
-	case 34:	y = x - 2 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 1, 0, bb2, 0, 2, 0, 0);		 break;
-	case 35:	y = x - 5 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 1, 0, bb2, 2, 7, 0, 0);		 break;
-	case 36:	y = x - 7 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 1, 0, bb2, 0, 7, 0, 0);		 break;
-	case 37:	y = x - 9 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 1, 0, bb2, 0, 9, 0, 0);		 break;
-	case 38:	y = (x + 0) / 2 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 2, 0, bb2, 0, 0, 0, 0);		 break;
-	case 39:	y = (x + 2) / 2 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 2, 0, bb2, 0, 2, 0, 0);		 break;
-	case 40:	y = (x + 2) / 2 - 2 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 2, 0, bb2, 2, 0, 0, 0);		 break;
-	case 41:	y = (x + 7) / 2 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 2, 0, bb2, 0, 7, 0, 0);		 break;
-	case 42:	y = (x + 7) / 2 - 7 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 2, 0, bb2, 7, 0, 0, 0);		 break;
-	case 43:	y = (x + 9) / 2 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 2, 0, bb2, 0, 9, 0, 0);		 break;
-	case 44:	y = (x + 9) / 2 - 2 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 2, 0, bb2, 2, 7, 0, 0);		 break;
-	case 45:	y = (x + 9) / 2 - 7 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 2, 0, bb2, 7, 2, 0, 0);		 break;
-	case 46:	y = (x + 9) / 2 - 9 + bb2;					if (n == 3){ c2 = b1 - (y - b2);	y2 = c2; };		data(x, y, y2, 2, 0, bb2, 9, 0, 0, 0);		 break;
-	case 47:	if (a2>0){ y = x - 2 - aa2 - bb2; 					if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 0, 2, aa2, bb2); }
-				else{ y = NULL; };	 break;
-	case 48:	if (a2>0){ y = x - 5 - aa2 - bb2; 					if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 2, 7, aa2, bb2); }
-				else{ y = NULL; };	 break;
-	case 49:	if (a2>0){ y = x - 7 - aa2 - bb2; 					if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 0, 7, aa2, bb2); }
-				else{ y = NULL; };	 break;
-	case 50:	if (a2>0){ y = x - 9 - aa2 - bb2; 					if (n == 3){ c2 = b1 - y;	y2 = c2; };		data(x, y, y2, 1, 0, 0, 0, 9, aa2, bb2); }
-				else{ y = NULL; };	 break;
-	case 51:	if (a2>0){ y = x - 2 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 1, aa2, bb2, 0, 2, 0, 0); }
-				else{ y = NULL; };	 break;
-	case 52:	if (a2>0){ y = x - 5 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 1, aa2, bb2, 2, 7, 0, 0); }
-				else{ y = NULL; };	 break;
-	case 53:	if (a2>0){ y = x - 7 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 1, aa2, bb2, 0, 7, 0, 0); }
-				else{ y = NULL; };	 break;
-	case 54:	if (a2>0){ y = x - 9 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 1, aa2, bb2, 0, 9, 0, 0); }
-				else{ y = NULL; };	 break;
-	case 55:	if (a2>0){ y = (x + 0) / 2 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 2, aa2, bb2, 0, 0, 0, 0); }
-				else{ y = NULL; };	 break;
-	case 56:	if (a2>0){ y = (x + 2) / 2 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 2, aa2, bb2, 0, 2, 0, 0); }
-				else{ y = NULL; };	 break;
-	case 57:	if (a2>0){ y = (x + 2) / 2 - 2 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 2, aa2, bb2, 2, 0, 0, 0); }
-				else{ y = NULL; };	 break;
-	case 58:	if (a2>0){ y = (x + 7) / 2 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 2, aa2, bb2, 0, 7, 0, 0); }
-				else{ y = NULL; };	 break;
-	case 59:	if (a2>0){ y = (x + 7) / 2 - 7 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 2, aa2, bb2, 7, 0, 0, 0); }
-				else{ y = NULL; };	 break;
-	case 60:	if (a2>0){ y = (x + 9) / 2 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 2, aa2, bb2, 0, 9, 0, 0); }
-				else{ y = NULL; };	 break;
-	case 61:	if (a2>0){ y = (x + 9) / 2 - 2 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 2, aa2, bb2, 2, 7, 0, 0); }
-				else{ y = NULL; };	 break;
-	case 62:	if (a2>0){ y = (x + 9) / 2 - 7 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 2, aa2, bb2, 7, 2, 0, 0); }
-				else{ y = NULL; };	 break;
-	case 63:	if (a2>0){ y = (x + 9) / 2 - 9 + aa2 + bb2;  					if (n == 3){ c2 = b1 - (y - a2 - b2);	y2 = c2; };		data(x, y, y2, 2, aa2, bb2, 9, 0, 0, 0); }
-				else{ y = NULL; };	 break;
+	case 0: y=x-2;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,0,2,0,0);break;
+	case 1: y=x-5;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,2,7,0,0);break;
+	case 2: y=x-7;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,0,7,0,0);break;
+	case 3: y=x-9;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,0,9,0,0);break;
+	case 4: y=(x+0)/2;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,2,0,0,0,0,0,0);break;
+	case 5: y=(x+2)/2;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,2,0,0,0,2,0,0);break;
+	case 6: y=(x+2)/2-2;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,2,0,0,2,0,0,0);break;
+	case 7: y=(x+7)/2;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,2,0,0,0,7,0,0);break;
+	case 8: y=(x+7)/2-7;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,2,0,0,7,0,0,0);break;
+	case 9: y=(x+9)/2;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,2,0,0,0,9,0,0);break;
+	case 10: y=(x+9)/2-2;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,2,0,0,2,7,0,0);break;
+	case 11: y=(x+9)/2-7;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,2,0,0,7,2,0,0);break;
+	case 12: y=(x+9)/2-9;  if(n==1){a2=start-y;y2=a2;};  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,2,0,0,9,0,0,0);break;
+	case 13: y=x-2-aa2;  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,0,2,aa2,0);break;
+	case 14: y=x-5-aa2;  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,2,7,aa2,0);break;
+	case 15: y=x-7-aa2;  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,0,7,aa2,0);break;
+	case 16: y=x-9-aa2;  if(n==2){b2=a1-y;y2=b2;};  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,0,9,aa2,0);break;
+	case 17: y=x-2+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,1,aa2,0,0,2,0,0);break;
+	case 18: y=x-5+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,1,aa2,0,2,7,0,0);break;
+	case 19: y=x-7+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,1,aa2,0,0,7,0,0);break;
+	case 20: y=x-9+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,1,aa2,0,0,9,0,0);break;
+	case 21: y=(x+0)/2+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,2,aa2,0,0,0,0,0);break;
+	case 22: y=(x+2)/2+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,2,aa2,0,0,2,0,0);break;
+	case 23: y=(x+2)/2-2+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,2,aa2,0,2,0,0,0);break;
+	case 24: y=(x+7)/2+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,2,aa2,0,0,7,0,0);break;
+	case 25: y=(x+7)/2-7+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,2,aa2,0,7,0,0,0);break;
+	case 26: y=(x+9)/2+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,2,aa2,0,0,9,0,0);break;
+	case 27: y=(x+9)/2-2+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,2,aa2,0,2,7,0,0);break;
+	case 28: y=(x+9)/2-7+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,2,aa2,0,7,2,0,0);break;
+	case 29: y=(x+9)/2-9+aa2;  if(n==2){b2=a1-(y-a2);y2=b2;};  if(n==3){c2=b1-(y-a2);y2=c2;};a2=0;  data(x,y,y2,2,aa2,0,9,0,0,0);break;
+	case 30: y=x-2-bb2;  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,0,2,0,bb2);break;
+	case 31: y=x-5-bb2;  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,2,7,0,bb2);break;
+	case 32: y=x-7-bb2;  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,0,7,0,bb2);break;
+	case 33: y=x-9-bb2;  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,0,9,0,bb2);break;
+	case 34: y=x-2+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,1,0,bb2,0,2,0,0);break;
+	case 35: y=x-5+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,1,0,bb2,2,7,0,0);break;
+	case 36: y=x-7+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,1,0,bb2,0,7,0,0);break;
+	case 37: y=x-9+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,1,0,bb2,0,9,0,0);break;
+	case 38: y=(x+0)/2+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,2,0,bb2,0,0,0,0);break;
+	case 39: y=(x+2)/2+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,2,0,bb2,0,2,0,0);break;
+	case 40: y=(x+2)/2-2+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,2,0,bb2,2,0,0,0);break;
+	case 41: y=(x+7)/2+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,2,0,bb2,0,7,0,0);break;
+	case 42: y=(x+7)/2-7+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,2,0,bb2,7,0,0,0);break;
+	case 43: y=(x+9)/2+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,2,0,bb2,0,9,0,0);break;
+	case 44: y=(x+9)/2-2+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,2,0,bb2,2,7,0,0);break;
+	case 45: y=(x+9)/2-7+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,2,0,bb2,7,2,0,0);break;
+	case 46: y=(x+9)/2-9+bb2;  if(n==3){c2=b1-(y-b2);y2=c2;};  data(x,y,y2,2,0,bb2,9,0,0,0);break;
+	case 47: if(a2>0){y=x-2-aa2-bb2;  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,0,2,aa2,bb2);}
+			else{y=NULL;};break;
+	case 48: if(a2>0){y=x-5-aa2-bb2;  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,2,7,aa2,bb2);}
+			else{y=NULL;};break;
+	case 49: if(a2>0){y=x-7-aa2-bb2;  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,0,7,aa2,bb2);}
+			else{y=NULL;};break;
+	case 50: if(a2>0){y=x-9-aa2-bb2;  if(n==3){c2=b1-y;y2=c2;};  data(x,y,y2,1,0,0,0,9,aa2,bb2);}
+			else{y=NULL;};break;
+	case 51: if(a2>0){y=x-2+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,1,aa2,bb2,0,2,0,0);}
+			else{y=NULL;};break;
+	case 52: if(a2>0){y=x-5+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,1,aa2,bb2,2,7,0,0);}
+			else{y=NULL;};break;
+	case 53: if(a2>0){y=x-7+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,1,aa2,bb2,0,7,0,0);}
+			else{y=NULL;};break;
+	case 54: if(a2>0){y=x-9+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,1,aa2,bb2,0,9,0,0);}
+			else{y=NULL;};break;
+	case 55: if(a2>0){y=(x+0)/2+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,2,aa2,bb2,0,0,0,0);}
+			else{y=NULL;};break;
+	case 56: if(a2>0){y=(x+2)/2+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,2,aa2,bb2,0,2,0,0);}
+			else{y=NULL;};break;
+	case 57: if(a2>0){y=(x+2)/2-2+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,2,aa2,bb2,2,0,0,0);}
+			else{y=NULL;};break;
+	case 58: if(a2>0){y=(x+7)/2+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,2,aa2,bb2,0,7,0,0);}
+			else{y=NULL;};break;
+	case 59: if(a2>0){y=(x+7)/2-7+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,2,aa2,bb2,7,0,0,0);}
+			else{y=NULL;};break;
+	case 60: if(a2>0){y=(x+9)/2+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,2,aa2,bb2,0,9,0,0);}
+			else{y=NULL;};break;
+	case 61: if(a2>0){y=(x+9)/2-2+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,2,aa2,bb2,2,7,0,0);}
+			else{y=NULL;};break;
+	case 62: if(a2>0){y=(x+9)/2-7+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,2,aa2,bb2,7,2,0,0);}
+			else{y=NULL;};break;
+	case 63: if(a2>0){y=(x+9)/2-9+aa2+bb2;  if(n==3){c2=b1-(y-a2-b2);y2=c2;};  data(x,y,y2,2,aa2,bb2,9,0,0,0);}
+			else{y=NULL;};break;
 	};
 
 	return y;
