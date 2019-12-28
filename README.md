@@ -18,8 +18,8 @@
 <br>
 
 - 附：  
-1. [chenyan.cpp](V1/chenyan.cpp)  
-2. [运行结果](V1/Result.txt)  
+1. [chenyan.cpp](V1/chenyanV1.cpp)  
+2. [运行结果: Result.txt](V1/Result.txt)  
 3. [设计之初的excel分析](V1/称盐函数分析9_15.xlsx)  
 
 ### 1.2. V2版本
@@ -61,7 +61,8 @@
 ```
 
 - 附：
-1. [chenyanV2.py](V2/chenyan.py)
+1. [chenyanV2.py](V2/chenyanV2.py)
+2. [运行结果: Result.txt](V2/Result.txt)
 
 ### 1.3. V3
 
@@ -71,6 +72,11 @@
 数据结构设计为层层嵌套的字典，内部对于嵌套层的获取采用递归方式处理。意味着，可以输入任意层数而向下迭代，比如不一定是只能用3次天平。
 
 通过该方法计算，一共获得23种不重复的方法，与V2版本一致。
+
+- 附
+1. [chenyanV3.py(主程序)](V3/chenyanV3.py)
+2. [chenyanV3++.py(可视化实现)](V3/chenyanV3++.py)
+3. [运行结果: Result.txt](V3/Result.txt)
 
 可视化运行结果：
 
