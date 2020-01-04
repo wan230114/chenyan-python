@@ -15,5 +15,5 @@
 可视化运行结果：  
 （PS：括号左，所需砝码；括号右，移动操作的沙堆）
 
-<img src="V3/result.gv.png" />
+![](V3/result.gv.png)
 
