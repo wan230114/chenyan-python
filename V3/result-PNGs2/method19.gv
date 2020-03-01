@@ -1,0 +1,23 @@
+// comment
+digraph method19 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"19_00_0" [label="method19: 
+140"]
+	"19_1_1" [label=71]
+	"19_1_2" [label=69]
+	"19_00_0" -> "19_1_1" [label="( +0,-71)"]
+	"19_00_0" -> "19_1_2" [label="( -2,-69)"]
+	"19_2_1" [label=40]
+	"19_2_2" [label=31]
+	"19_1_1" -> "19_2_1" [label="( +0,-40)"]
+	"19_1_1" -> "19_2_2" [label="( -9,-31)"]
+	"19_2_3" [label=109]
+	"19_2_1" -> "19_2_3"
+	"19_1_2" -> "19_2_3"
+	"19_3_1" [label=50 color=red fontcolor=red]
+	"19_3_2" [label=59]
+	"19_2_3" -> "19_3_1" [label="( -9,-50)"]
+	"19_2_3" -> "19_3_2" [label="( +0,-59)"]
+}

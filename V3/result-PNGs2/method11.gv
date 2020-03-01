@@ -1,0 +1,26 @@
+// comment
+digraph method11 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"11_00_0" [label="method11: 
+140"]
+	"11_1_1" [label=70]
+	"11_1_2" [label=70]
+	"11_00_0" -> "11_1_1" [label="( +0,-70)"]
+	"11_00_0" -> "11_1_2" [label="( +0,-70)"]
+	"11_2_1" [label=35]
+	"11_2_2" [label=35]
+	"11_1_1" -> "11_2_1" [label="( +0,-35)"]
+	"11_1_1" -> "11_2_2" [label="( +0,-35)"]
+	"11_2_3" [label=105]
+	"11_2_2" -> "11_2_3"
+	"11_1_2" -> "11_2_3"
+	"11_3_1" [label=55]
+	"11_3_2" [label=50]
+	"11_2_3" -> "11_3_1" [label="( -2,-55)"]
+	"11_2_3" -> "11_3_2" [label="( -7,-50)"]
+	"11_3_3" [label=90 color=red fontcolor=red]
+	"11_3_1" -> "11_3_3"
+	"11_2_2" -> "11_3_3"
+}

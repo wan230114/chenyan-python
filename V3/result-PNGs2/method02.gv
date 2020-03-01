@@ -1,0 +1,20 @@
+// comment
+digraph method02 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"02_00_0" [label="method 2: 
+140"]
+	"02_1_1" [label=133]
+	"02_1_2" [label=7]
+	"02_00_0" -> "02_1_1" [label="( +0, -7)"]
+	"02_00_0" -> "02_1_2" [label="( +7, +0)"]
+	"02_2_1" [label=62]
+	"02_2_2" [label=71]
+	"02_1_1" -> "02_2_1" [label="( -9,-62)"]
+	"02_1_1" -> "02_2_2" [label="( +0,-71)"]
+	"02_3_1" [label=50 color=red fontcolor=red]
+	"02_3_2" [label=12]
+	"02_2_1" -> "02_3_1" [label="( -2,-12)"]
+	"02_2_1" -> "02_3_2" [label="( +7, +7)"]
+}

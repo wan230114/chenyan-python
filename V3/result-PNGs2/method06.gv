@@ -1,0 +1,20 @@
+// comment
+digraph method06 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"06_00_0" [label="method 6: 
+140"]
+	"06_1_1" [label=131]
+	"06_1_2" [label=9]
+	"06_00_0" -> "06_1_1" [label="( +0, -9)"]
+	"06_00_0" -> "06_1_2" [label="( +9, +0)"]
+	"06_2_1" [label=68]
+	"06_2_2" [label=63]
+	"06_1_1" -> "06_2_1" [label="( -2,-68)"]
+	"06_1_1" -> "06_2_2" [label="( -7,-63)"]
+	"06_3_1" [label=50 color=red fontcolor=red]
+	"06_3_2" [label=18]
+	"06_2_1" -> "06_3_1" [label="( +0,-18)"]
+	"06_2_1" -> "06_3_2" [label="( +9, +9)"]
+}

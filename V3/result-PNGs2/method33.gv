@@ -1,0 +1,26 @@
+// comment
+digraph method33 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"33_00_0" [label="method33: 
+140"]
+	"33_1_1" [label=69]
+	"33_1_2" [label=71]
+	"33_00_0" -> "33_1_1" [label="( -2,-69)"]
+	"33_00_0" -> "33_1_2" [label="( +0,-71)"]
+	"33_2_1" [label=31]
+	"33_2_2" [label=38]
+	"33_1_1" -> "33_2_1" [label="( -7,-31)"]
+	"33_1_1" -> "33_2_2" [label="( +0,-38)"]
+	"33_2_3" [label=102]
+	"33_2_1" -> "33_2_3"
+	"33_1_2" -> "33_2_3"
+	"33_3_1" [label=52]
+	"33_3_2" [label=50]
+	"33_2_3" -> "33_3_1" [label="( +0,-52)"]
+	"33_2_3" -> "33_3_2" [label="( -2,-50)"]
+	"33_3_3" [label=90 color=red fontcolor=red]
+	"33_3_1" -> "33_3_3"
+	"33_2_2" -> "33_3_3"
+}

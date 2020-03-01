@@ -1,0 +1,23 @@
+// comment
+digraph method24 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"24_00_0" [label="method24: 
+140"]
+	"24_1_1" [label=71]
+	"24_1_2" [label=69]
+	"24_00_0" -> "24_1_1" [label="( +0,-71)"]
+	"24_00_0" -> "24_1_2" [label="( -2,-69)"]
+	"24_2_1" [label=31]
+	"24_2_2" [label=40]
+	"24_1_1" -> "24_2_1" [label="( -9,-31)"]
+	"24_1_1" -> "24_2_2" [label="( +0,-40)"]
+	"24_2_3" [label=100]
+	"24_2_1" -> "24_2_3"
+	"24_1_2" -> "24_2_3"
+	"24_3_1" [label=50 color=red fontcolor=red]
+	"24_3_2" [label=50]
+	"24_2_3" -> "24_3_1" [label="( +0,-50)"]
+	"24_2_3" -> "24_3_2" [label="( +0,-50)"]
+}

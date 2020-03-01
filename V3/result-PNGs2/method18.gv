@@ -1,0 +1,26 @@
+// comment
+digraph method18 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"18_00_0" [label="method18: 
+140"]
+	"18_1_1" [label=71]
+	"18_1_2" [label=69]
+	"18_00_0" -> "18_1_1" [label="( +0,-71)"]
+	"18_00_0" -> "18_1_2" [label="( -2,-69)"]
+	"18_2_1" [label=40]
+	"18_2_2" [label=31]
+	"18_1_1" -> "18_2_1" [label="( +0,-40)"]
+	"18_1_1" -> "18_2_2" [label="( -9,-31)"]
+	"18_2_3" [label=109]
+	"18_2_1" -> "18_2_3"
+	"18_1_2" -> "18_2_3"
+	"18_3_1" [label=59]
+	"18_3_2" [label=50]
+	"18_2_3" -> "18_3_1" [label="( +0,-59)"]
+	"18_2_3" -> "18_3_2" [label="( -9,-50)"]
+	"18_3_3" [label=90 color=red fontcolor=red]
+	"18_3_1" -> "18_3_3"
+	"18_2_2" -> "18_3_3"
+}

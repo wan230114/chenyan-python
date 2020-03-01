@@ -1,0 +1,23 @@
+// comment
+digraph method13 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"13_00_0" [label="method13: 
+140"]
+	"13_1_1" [label=71]
+	"13_1_2" [label=69]
+	"13_00_0" -> "13_1_1" [label="( +0,-71)"]
+	"13_00_0" -> "13_1_2" [label="( -2,-69)"]
+	"13_2_1" [label=40]
+	"13_2_2" [label=31]
+	"13_1_1" -> "13_2_1" [label="( +0,-40)"]
+	"13_1_1" -> "13_2_2" [label="( -9,-31)"]
+	"13_3_1" [label=19]
+	"13_3_2" [label=21]
+	"13_2_1" -> "13_3_1" [label="( -2,-19)"]
+	"13_2_1" -> "13_3_2" [label="( +0,-21)"]
+	"13_3_3" [label=50 color=red fontcolor=red]
+	"13_3_1" -> "13_3_3"
+	"13_2_2" -> "13_3_3"
+}

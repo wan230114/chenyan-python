@@ -1,0 +1,23 @@
+// comment
+digraph method30 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"30_00_0" [label="method30: 
+140"]
+	"30_1_1" [label=69]
+	"30_1_2" [label=71]
+	"30_00_0" -> "30_1_1" [label="( -2,-69)"]
+	"30_00_0" -> "30_1_2" [label="( +0,-71)"]
+	"30_2_1" [label=38]
+	"30_2_2" [label=31]
+	"30_1_1" -> "30_2_1" [label="( +0,-38)"]
+	"30_1_1" -> "30_2_2" [label="( -7,-31)"]
+	"30_2_3" [label=109]
+	"30_2_1" -> "30_2_3"
+	"30_1_2" -> "30_2_3"
+	"30_3_1" [label=50 color=red fontcolor=red]
+	"30_3_2" [label=59]
+	"30_2_3" -> "30_3_1" [label="( -9,-50)"]
+	"30_2_3" -> "30_3_2" [label="( +0,-59)"]
+}

@@ -1,0 +1,20 @@
+// comment
+digraph "method 8" {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"08_00_0" [label="method 8: 
+140"]
+	"08_1_1" [label=70]
+	"08_1_2" [label=70]
+	"08_00_0" -> "08_1_1" [label="( +0,-70)"]
+	"08_00_0" -> "08_1_2" [label="( +0,-70)"]
+	"08_2_1" [label=61]
+	"08_2_2" [label=9]
+	"08_1_1" -> "08_2_1" [label="( +0, -9)"]
+	"08_1_1" -> "08_2_2" [label="( +9, +0)"]
+	"08_3_1" [label=50 color=red fontcolor=red]
+	"08_3_2" [label=11]
+	"08_2_1" -> "08_3_1" [label="( +0,-11)"]
+	"08_2_1" -> "08_3_2" [label="( +2, +9)"]
+}

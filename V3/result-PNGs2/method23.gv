@@ -1,0 +1,23 @@
+// comment
+digraph method23 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"23_00_0" [label="method23: 
+140"]
+	"23_1_1" [label=71]
+	"23_1_2" [label=69]
+	"23_00_0" -> "23_1_1" [label="( +0,-71)"]
+	"23_00_0" -> "23_1_2" [label="( -2,-69)"]
+	"23_2_1" [label=33]
+	"23_2_2" [label=38]
+	"23_1_1" -> "23_2_1" [label="( -7,-33)"]
+	"23_1_1" -> "23_2_2" [label="( -2,-38)"]
+	"23_2_3" [label=102]
+	"23_2_1" -> "23_2_3"
+	"23_1_2" -> "23_2_3"
+	"23_3_1" [label=50 color=red fontcolor=red]
+	"23_3_2" [label=52]
+	"23_2_3" -> "23_3_1" [label="( -2,-50)"]
+	"23_2_3" -> "23_3_2" [label="( +0,-52)"]
+}

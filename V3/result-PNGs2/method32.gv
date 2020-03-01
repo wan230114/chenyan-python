@@ -1,0 +1,23 @@
+// comment
+digraph method32 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"32_00_0" [label="method32: 
+140"]
+	"32_1_1" [label=69]
+	"32_1_2" [label=71]
+	"32_00_0" -> "32_1_1" [label="( -2,-69)"]
+	"32_00_0" -> "32_1_2" [label="( +0,-71)"]
+	"32_2_1" [label=31]
+	"32_2_2" [label=38]
+	"32_1_1" -> "32_2_1" [label="( -7,-31)"]
+	"32_1_1" -> "32_2_2" [label="( +0,-38)"]
+	"32_3_1" [label=12]
+	"32_3_2" [label=19]
+	"32_2_1" -> "32_3_1" [label="( -7,-12)"]
+	"32_2_1" -> "32_3_2" [label="( +0,-19)"]
+	"32_3_3" [label=50 color=red fontcolor=red]
+	"32_3_1" -> "32_3_3"
+	"32_2_2" -> "32_3_3"
+}

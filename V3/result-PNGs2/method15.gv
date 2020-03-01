@@ -1,0 +1,23 @@
+// comment
+digraph method15 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"15_00_0" [label="method15: 
+140"]
+	"15_1_1" [label=71]
+	"15_1_2" [label=69]
+	"15_00_0" -> "15_1_1" [label="( +0,-71)"]
+	"15_00_0" -> "15_1_2" [label="( -2,-69)"]
+	"15_2_1" [label=38]
+	"15_2_2" [label=33]
+	"15_1_1" -> "15_2_1" [label="( -2,-38)"]
+	"15_1_1" -> "15_2_2" [label="( -7,-33)"]
+	"15_2_3" [label=107]
+	"15_2_1" -> "15_2_3"
+	"15_1_2" -> "15_2_3"
+	"15_3_1" [label=50 color=red fontcolor=red]
+	"15_3_2" [label=57]
+	"15_2_3" -> "15_3_1" [label="( -7,-50)"]
+	"15_2_3" -> "15_3_2" [label="( +0,-57)"]
+}

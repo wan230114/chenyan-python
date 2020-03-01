@@ -1,0 +1,23 @@
+// comment
+digraph method09 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"09_00_0" [label="method 9: 
+140"]
+	"09_1_1" [label=70]
+	"09_1_2" [label=70]
+	"09_00_0" -> "09_1_1" [label="( +0,-70)"]
+	"09_00_0" -> "09_1_2" [label="( +0,-70)"]
+	"09_2_1" [label=35]
+	"09_2_2" [label=35]
+	"09_1_1" -> "09_2_1" [label="( +0,-35)"]
+	"09_1_1" -> "09_2_2" [label="( +0,-35)"]
+	"09_3_1" [label=20]
+	"09_3_2" [label=15]
+	"09_2_1" -> "09_3_1" [label="( -2,-20)"]
+	"09_2_1" -> "09_3_2" [label="( -7,-15)"]
+	"09_3_3" [label=90 color=red fontcolor=red]
+	"09_3_1" -> "09_3_3"
+	"09_1_2" -> "09_3_3"
+}

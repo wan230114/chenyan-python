@@ -1,0 +1,20 @@
+// comment
+digraph method25 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"25_00_0" [label="method25: 
+140"]
+	"25_1_1" [label=69]
+	"25_1_2" [label=71]
+	"25_00_0" -> "25_1_1" [label="( -2,-69)"]
+	"25_00_0" -> "25_1_2" [label="( +0,-71)"]
+	"25_2_1" [label=62]
+	"25_2_2" [label=7]
+	"25_1_1" -> "25_2_1" [label="( +0, -7)"]
+	"25_1_1" -> "25_2_2" [label="( +7, +0)"]
+	"25_3_1" [label=50 color=red fontcolor=red]
+	"25_3_2" [label=12]
+	"25_2_1" -> "25_3_1" [label="( -2,-12)"]
+	"25_2_1" -> "25_3_2" [label="( +7, +7)"]
+}

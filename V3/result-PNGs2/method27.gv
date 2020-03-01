@@ -1,0 +1,23 @@
+// comment
+digraph method27 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"27_00_0" [label="method27: 
+140"]
+	"27_1_1" [label=69]
+	"27_1_2" [label=71]
+	"27_00_0" -> "27_1_1" [label="( -2,-69)"]
+	"27_00_0" -> "27_1_2" [label="( +0,-71)"]
+	"27_2_1" [label=38]
+	"27_2_2" [label=31]
+	"27_1_1" -> "27_2_1" [label="( +0,-38)"]
+	"27_1_1" -> "27_2_2" [label="( -7,-31)"]
+	"27_3_1" [label=19]
+	"27_3_2" [label=19]
+	"27_2_1" -> "27_3_1" [label="( +0,-19)"]
+	"27_2_1" -> "27_3_2" [label="( +0,-19)"]
+	"27_3_3" [label=90 color=red fontcolor=red]
+	"27_3_2" -> "27_3_3"
+	"27_1_2" -> "27_3_3"
+}

@@ -1,0 +1,23 @@
+// comment
+digraph method34 {
+	graph [rankdir=LR]
+	node [color=black fontcolor=black fontsize=12 shape=box style=rounded]
+	edge [color="#999999" fontcolor="#888888" fontsize=10]
+	"34_00_0" [label="method34: 
+140"]
+	"34_1_1" [label=69]
+	"34_1_2" [label=71]
+	"34_00_0" -> "34_1_1" [label="( -2,-69)"]
+	"34_00_0" -> "34_1_2" [label="( +0,-71)"]
+	"34_2_1" [label=31]
+	"34_2_2" [label=38]
+	"34_1_1" -> "34_2_1" [label="( -7,-31)"]
+	"34_1_1" -> "34_2_2" [label="( +0,-38)"]
+	"34_2_3" [label=102]
+	"34_2_1" -> "34_2_3"
+	"34_1_2" -> "34_2_3"
+	"34_3_1" [label=50 color=red fontcolor=red]
+	"34_3_2" [label=52]
+	"34_2_3" -> "34_3_1" [label="( -2,-50)"]
+	"34_2_3" -> "34_3_2" [label="( +0,-52)"]
+}
