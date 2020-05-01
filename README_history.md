@@ -72,6 +72,6 @@
 通过该方法计算，一共获得23种不重复的方法，与V2版本一致。
 
 - 附
-1. [chenyanV3.py(主程序)](V3/chenyanV3.py)
-2. [chenyanV3++.py(可视化实现)](V3/chenyanV3++.py)
-3. [运行结果: Result.txt](V3/Result.txt)
+1. [chenyanV3.py(主程序)](chenyanV3.py)
+2. [pkg_view.py(可视化实现)](pkg_view.py)
+3. [运行结果: Result.txt](Result.txt)
